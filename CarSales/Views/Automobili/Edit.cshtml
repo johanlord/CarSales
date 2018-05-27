@@ -1,0 +1,174 @@
+﻿@model CarSales.Models.Automobil
+@using CarSales.Resources
+
+@{
+    ViewBag.Title = Resource.Edit;
+}
+
+<h2>@Resource.Edit</h2>
+
+@if (User.Identity.Name == Model.Korisnik || User.Identity.Name == "admin@gmail.com")
+{
+    <form action="/Automobili/Edit" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Automobil</h4>
+            <hr />
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <input type="hidden" name="AutomobilId" value="@Model.AutomobilId" />
+            <input id="promena" type="hidden" name="promena" value="0" />
+
+            <div class="form-group">
+                <label for="TextMarka" class="control-label col-md-2">@Resource.Brand</label>
+
+                <div class="col-md-10">
+                    <input id="TextMarka" type="text" name="Marka" value="@Model.Marka" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.Marka, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextModel" class="control-label col-md-2">@Resource.Model</label>
+
+                <div class="col-md-10">
+                    <input id="TextModel" type="text" name="Model" value="@Model.Model" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.Model, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextGodiste" class="control-label col-md-2">@Resource.Year</label>
+
+                <div class="col-md-10">
+                    <input id="TextGodiste" type="text" name="Godiste" value="@Model.Godiste" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.Godiste, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextZapremina" class="control-label col-md-2">@Resource.EngineDisplacement</label>
+
+                <div class="col-md-10">
+                    <input id="TextZapremina" type="text" name="ZapreminaMotora" value="@Model.ZapreminaMotora" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.ZapreminaMotora, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextSnaga" class="control-label col-md-2">@Resource.HP</label>
+
+                <div class="col-md-10">
+                    <input id="TextSnaga" type="text" name="Snaga" value="@Model.Snaga" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.Snaga, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextGorivo" class="control-label col-md-2">@Resource.Fuel</label>
+
+                <div class="col-md-10">
+                    <input id="TextGorivo" type="text" name="Gorivo" value="@Model.Gorivo" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.Gorivo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextKaroserija" class="control-label col-md-2">@Resource.CarBody</label>
+
+                <div class="col-md-10">
+                    <input id="TextKaroserija" type="text" name="Karoserija" value="@Model.Karoserija" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.Karoserija, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextOpis" class="control-label col-md-2">@Resource.Description</label>
+
+                <div class="col-md-10">
+                    <textarea id="TextOpis" rows="2" cols="20" name="Opis" class="form-control">@Model.Opis</textarea>
+                    @Html.ValidationMessageFor(m => m.Opis, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextCena" class="control-label col-md-2">@Resource.Price</label>
+
+                <div class="col-md-10">
+                    <input id="TextCena" type="text" name="Cena" value="@Model.Cena" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.Cena, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="TextKontakt" class="control-label col-md-2">@Resource.Contact</label>
+
+                <div class="col-md-10">
+                    <input id="TextKontakt" type="text" name="Kontakt" value="@Model.Kontakt" class="form-control" />
+                    @Html.ValidationMessageFor(m => m.Kontakt, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="img1" class="control-label col-md-2">@Resource.CurrentPicture</label>
+
+                <div class="col-md-10">
+                    <img id="img1" width="200" src="@Url.Action("CitajSliku", "Automobili", new { id = Model.AutomobilId })" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="File1" class="control-label col-md-2"></label>
+
+                <div class="col-md-10">
+                    <input id="File1" type="file" name="poslatiFajl" onchange="UcitajSliku()" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input id="Submit1" type="submit" value="Ubaci" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </form>
+}
+else
+{
+    <p>@Resource.EditMessage</p>
+}
+
+
+<div>
+    @Html.ActionLink(Resource.Back, "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+<script>
+    function UcitajSliku() {
+        var fajl = document.getElementById("File1");
+
+        if (fajl.files.length != 0 && fajl.files[0].type.match(/image.*/)) {
+            var reader = new FileReader();
+            reader.readAsDataURL(fajl.files[0]);
+
+            reader.onload = function (e) {
+                var slika = document.getElementById("img1");
+                slika.src = reader.result;
+
+                $("#promena").attr("value", "1");
+            }
+
+            reader.onerror = function (e) {
+                alert("Ne moze da se ucita slika");
+            }
+        } else {
+            alert("Odaberite sliku");
+        }
+    }
+</script>
+
+}

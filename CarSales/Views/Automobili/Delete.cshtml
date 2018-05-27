@@ -1,0 +1,58 @@
+﻿@model CarSales.Models.Automobil
+@using CarSales.Resources
+
+@{
+    ViewBag.Title = Resource.Delete;
+}
+
+<h2>@Resource.Delete</h2>
+
+@if (User.Identity.Name == Model.Korisnik || User.Identity.Name == "admin@gmail.com")
+{
+    <h3>@Resource.Sure</h3>
+
+    <img width="200" src="@Url.Action("CitajSliku", "Automobili", new { id = Model.AutomobilId })" />
+    
+    <div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Resource.Brand
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Marka)
+            </dd>
+
+            <dt>
+                @Resource.Model
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Model)
+            </dd>
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value=@Resource.Delete class="btn btn-default" /> 
+                @Html.ActionLink(Resource.Back, "Index")
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div>
+        @Resource.DeleteMessage
+        <br />
+        <br />
+        @Html.ActionLink(Resource.Back, "Index")
+    </div>
+}
+
+
+
+    

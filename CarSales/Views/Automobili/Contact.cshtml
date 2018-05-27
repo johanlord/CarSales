@@ -1,0 +1,46 @@
+﻿@using CarSales.Resources;
+
+@{
+    ViewBag.Title = Resource.Contact;
+}
+
+<h2>@Resource.Contact</h2>
+<hr />
+
+<address>
+    Car Sales<br />
+    Georgi Dimitrova 35<br />
+    12000, Pozarevac<br />
+    Serbia
+</address>
+
+<div id="map"></div>
+
+<br />
+
+<address>
+    <strong>Tel:</strong> +381 60 74 83 282<br />
+    <strong>Email:</strong>   <a href="mailto:office@carsales.com">office@carsales.com</a><br />
+    <a href="#">www.carsales.com</a>
+</address>
+
+<p>
+    @Html.ActionLink(Resource.Back, "Index", "Automobili")
+</p>
+
+<script>
+      function initMap() {
+          var uluru = { lat: 44.603455, lng: 21.190210 };
+          var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYnplDHGDfkT7z1fQhlt1774kiQpUDx8g&callback=initMap">
+</script>

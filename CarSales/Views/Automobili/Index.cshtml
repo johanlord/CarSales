@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CarSales.Models.Automobil>
+@using CarSales.Resources
+
+@{
+    ViewBag.Title = @Resource.Home;
+}
+
+<div class="jumbotron">
+    <h1>@Resource.CarSales</h1>
+</div>
+
+<p>
+    @if (Request.IsAuthenticated)
+    {
+        <span>
+            @Html.ActionLink(@Resource.Add, "Create")
+        </span>       
+    }
+    else
+    {
+        <span>
+            @Resource.LoginMessage
+        </span>
+    }
+    
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Resource.Brand
+        </th>
+        <th>
+            @Resource.Model
+        </th>
+        <th>
+            @Resource.Year
+        </th>
+        <th>
+            @Resource.Price (&euro;)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Godiste)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cena)
+        </td>
+        <td>
+            @if (User.Identity.Name == item.Korisnik || User.Identity.Name == "admin@gmail.com")
+            {
+                <span>
+                    @Html.ActionLink(Resource.Edit, "Edit", new { id = item.AutomobilId }) |
+                    @Html.ActionLink(Resource.Delete, "Delete", new { id = item.AutomobilId }) |
+                </span>               
+            }          
+            @Html.ActionLink(Resource.Details, "Details", new { id = item.AutomobilId })
+        </td>
+    </tr>
+}
+
+</table>

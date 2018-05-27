@@ -1,0 +1,52 @@
+﻿@using CarSales.Resources
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" href="~/Images/favicon.ico" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink(Resource.CarSales, "Index", "Automobili", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(Resource.Home, "Index", "Automobili")</li>
+                    <li>@Html.ActionLink(Resource.AboutUs, "About", "Automobili")</li>
+                    <li>@Html.ActionLink(Resource.Contact, "Contact", "Automobili")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    <li> @Html.ActionLink("en |", "SetCulture", "Automobili", new { culture = "en", sourceUrl = Request.RawUrl, area = "" }, null) </li>
+                    <li> @Html.ActionLink("sr |", "SetCulture", "Automobili", new { culture = "sr", sourceUrl = Request.RawUrl, area = "" }, null) </li>
+                    <li> @Html.ActionLink("it", "SetCulture", "Automobili", new { culture = "it", sourceUrl = Request.RawUrl, area = "" }, null) </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p class="text-center">&copy; @DateTime.Now.Year - @Resource.CarSales</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>Riguardo a noi</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Aggiungere annuncio auto</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Torna alla lista</value>
+  </data>
+  <data name="BodyError" xml:space="preserve">
+    <value>È necessario immettere carrozzeria</value>
+  </data>
+  <data name="Brand" xml:space="preserve">
+    <value>Marca</value>
+  </data>
+  <data name="BrandError" xml:space="preserve">
+    <value>È necessario immettere marca</value>
+  </data>
+  <data name="CarBody" xml:space="preserve">
+    <value>Carrozzeria</value>
+  </data>
+  <data name="CarSales" xml:space="preserve">
+    <value>Le vendite di auto</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contatto</value>
+  </data>
+  <data name="ContactError" xml:space="preserve">
+    <value>È necessario immettere contatto</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Cancellare</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrizione</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>È necessario immettere descrizione</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Dettagli</value>
+  </data>
+  <data name="DisplacementError" xml:space="preserve">
+    <value>È necessario immettere cilindrata del motore</value>
+  </data>
+  <data name="EngineDisplacement" xml:space="preserve">
+    <value>Cilindrata del motore</value>
+  </data>
+  <data name="Fuel" xml:space="preserve">
+    <value>Carburante</value>
+  </data>
+  <data name="FuelError" xml:space="preserve">
+    <value>È necessario immettere tipo di combustibile</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HP" xml:space="preserve">
+    <value>HP</value>
+  </data>
+  <data name="HPError" xml:space="preserve">
+    <value>È necessario immettere HP</value>
+  </data>
+  <data name="LengthError" xml:space="preserve">
+    <value>Non è possibile inserire più di 150 caratteri</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Logoff</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Modello</value>
+  </data>
+  <data name="ModelError" xml:space="preserve">
+    <value>È necessario immettere modello</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordField" xml:space="preserve">
+    <value>Inserire la password qui...</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Prezzo</value>
+  </data>
+  <data name="PriceError" xml:space="preserve">
+    <value>È necessario immettere prezzo</value>
+  </data>
+  <data name="Sure" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare auto da un elenco?</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nome utente</value>
+  </data>
+  <data name="UsernameField" xml:space="preserve">
+    <value>Inserire nome utente qui...</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Anno</value>
+  </data>
+  <data name="YearError" xml:space="preserve">
+    <value>È necessario immettere anno di produzione</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Elenco delle vetture:</value>
+  </data>
+  <data name="AddButton" xml:space="preserve">
+    <value>Aggiungere</value>
+  </data>
+  <data name="Car" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Salvare</value>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Immagine</value>
+  </data>
+  <data name="LoginMessage" xml:space="preserve">
+    <value>Devi effettuare il login per poter inserire i tuoi annunci.</value>
+  </data>
+  <data name="ChoosePicture" xml:space="preserve">
+    <value>Sceglie l'immagine</value>
+  </data>
+  <data name="CurrentPicture" xml:space="preserve">
+    <value>Immagine attuale</value>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>Non puoi eliminare l'annuncio che non è di proprietà.</value>
+  </data>
+  <data name="EditMessage" xml:space="preserve">
+    <value>Non puoi modificare l'annuncio che non è di proprietà dell'utente.</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Utente</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Ciao</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registrare</value>
+  </data>
+  <data name="RegisterNew" xml:space="preserve">
+    <value>Registrati come nuovo utente.</value>
+  </data>
+  <data name="BrandLength" xml:space="preserve">
+    <value>Non è possibile immettere più di 50 caratteri per il marchio</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Conferma password</value>
+  </data>
+  <data name="ModelLength" xml:space="preserve">
+    <value>Non è possibile immettere più di 50 caratteri per il modello</value>
+  </data>
+  <data name="Remember" xml:space="preserve">
+    <value>Ricordati di me?</value>
+  </data>
+</root>
