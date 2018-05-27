@@ -33,6 +33,8 @@ namespace CarSales.Controllers
         public ActionResult Index()
         {
             return View(db.Automobili.ToList());
+
+            // PROBA ZA GITHUB PROMENU
         }
 
         // GET: Automobili/Details/5
